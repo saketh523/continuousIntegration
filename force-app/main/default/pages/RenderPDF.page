@@ -1,0 +1,16 @@
+<apex:page controller="accountcontact1">
+   <apex:pageBlock >
+       <apex:pageBlockSection >
+           <apex:pageBlockTable value="{!accounts}" var="accWrap">
+                  <apex:repeat value="{!accWrap.accounts}" var="acc">
+                      <apex:column headerValue="Account Name" value="{!acc.Name}"/>
+                       <apex:repeat value="{!acc.contacts}" var="cont">
+                      <apex:column headerValue="Contact Name" value="{!cont.Name}"/>
+					   <apex:column headerValue="Contact Email" value="{!cont.Email}"/>
+                       <apex:column headerValue="Contact Phone" value="{!cont.Phone}"/>
+                      </apex:repeat>
+               </apex:repeat>               
+           </apex:pageBlockTable>
+       </apex:pageBlockSection>
+   </apex:pageBlock>
+</apex:page>

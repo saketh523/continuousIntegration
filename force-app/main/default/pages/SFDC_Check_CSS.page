@@ -1,0 +1,67 @@
+<apex:page docType="html-5.0" standardController="Account" readOnly="true"  showQuickActionVfHeader="false" standardStylesheets="false">
+   <script type='text/javascript' src='/canvas/sdk/js/37.0/publisher.js'></script>
+    
+   <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
+    
+    <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="x-ua-compatible" content="ie=edge" />
+      <title></title>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <!-- Import the Design System style sheet -->
+      <apex:slds />
+    </head>
+    
+
+    <body>
+    
+    <apex:includeScript value="/lightning/lightning.out.js" />
+    
+    <apex:outputPanel styleClass="slds-page-header">
+    
+    <!-- PAGE HEADER -->   
+      <!-- LAYOUT GRID -->
+      <div class="slds-grid">
+        <!-- GRID COL -->
+        <div class="slds-col slds-has-flexi-truncate">
+          <!-- HEADING AREA -->
+           <p class="slds-text-title_caps slds-line-height_reset">Reports</p>
+          <!-- <h1 class="slds-page-header__title slds-m-right_small slds-align-middle slds-truncate"  title="My Reports">My Reports</h1> -->
+          <!-- / HEADING AREA -->
+        </div>
+        <div class="slds-col slds-no-flex slds-grid slds-align-top">
+          <div class="slds-button-group" role="group">
+              <button class="slds-button slds-button_neutral" onclick="closeAction();"> Close </button>
+             <!-- <button class="slds-button slds-button_neutral" onclick="back();"> Back </button> -->
+          </div>
+        </div>
+               
+    </div>
+    
+    </apex:outputPanel>
+    
+    
+    <!-- / PAGE HEADER -->    
+    <div id="lightningTest"  style="height:850px;"/>
+    </body>
+    
+    
+   
+    <script>  
+    function closeAction() {
+        Sfdc.canvas.publisher.publish({name: "publisher.close", payload:{ refresh:"true"}});  
+    }
+ 
+     
+    var accId = "{!Account.Id}";  
+    var myUserContext = "{!$User.UITheme}";
+    $Lightning.use("c:checkExternalCSS", function() {
+    $Lightning.createComponent("ui:button",
+          { label : "Click here!" },
+          "lightning",
+          function(cmp) {
+          });
+   )}; 
+    </script>
+    </html>
+</apex:page>

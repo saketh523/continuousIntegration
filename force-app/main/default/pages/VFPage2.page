@@ -1,0 +1,24 @@
+<apex:page controller="AccContact" renderAs="pdf">
+<apex:form >
+   <apex:pageblock >
+       <table border="1ptx">
+           <tr>
+               <th> Account Name</th>
+               <th> Contact Name</th>
+               <th> Contact Email</th>
+               <th> Contact Phone</th>
+           </tr>
+       	
+               <apex:repeat value="{!accconts2}" var="a" >
+                  <tr>           
+                   <td>    <apex:outputText value="{!a.account.name}" /> </td> 
+                   <td>    <apex:outputText value="{!a.name}" /> </td> 
+                   <td>    <apex:outputText value="{!a.email}" /> </td> 
+                   <td>    <apex:outputText value="{!a.phone}" /> </td> 
+                   </tr>
+				</apex:repeat>
+           		
+             </table>
+       </apex:pageblock>
+       </apex:form>
+</apex:page>

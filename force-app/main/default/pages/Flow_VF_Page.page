@@ -1,0 +1,4 @@
+<apex:page >
+    <flow:interview name="Example_Flow_Test" >
+    </flow:interview>
+</apex:page>

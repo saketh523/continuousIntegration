@@ -1,0 +1,10 @@
+<aura:component>
+  <aura:attribute name="clickdisable" type="Boolean" default="true" />    
+<a>    <lightning:progressIndicator currentStep="3" type="path" variant="base" aura:id="ppindex">
+        <lightning:progressStep label="Contacted" value="1" onclick="{!c.handleclick}"/>
+        <lightning:progressStep label="Open" value="2"/>
+		<lightning:progressStep label="Unqualified" value="3"/>
+        <lightning:progressStep label="Nurturing" value="4"/>
+        <lightning:progressStep label="Closed" value="5"/>
+    </lightning:progressIndicator> </a>
+</aura:component>

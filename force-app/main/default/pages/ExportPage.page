@@ -1,0 +1,10 @@
+<apex:page controller="contactquery" contentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" cache="true">
+<!--contentType="application/vnd.ms-excel#SalesForceExport.xls"-->
+<!--contentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" -->
+    <apex:pageBlock title="Export Results" >
+        <apex:pageBlockTable value="{!cs}" var="contact">
+            <apex:column value="{!contact.ID}"/>
+            <apex:column value="{!contact.Name}"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>

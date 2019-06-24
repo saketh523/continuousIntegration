@@ -1,0 +1,42 @@
+<apex:page >
+<head>
+
+<style>
+
+@page {
+    margin : 70pt .5in .5in .5in;
+    
+    @top-left {
+    content : element(logo);
+    }
+    
+    @top-center {
+        content : "Cash Call for Professional Liability";
+     }
+}
+div.logo { 
+        display: block;
+        position: running(logo);
+}
+
+div.header {
+    position : running(header) ;
+}
+
+div.footer {
+    position : running(footer) ;
+}
+
+tr{ page-break-inside: avoid }
+thead{ display: table-header-group }
+table{ -fs-table-paginate: paginate }
+</style>
+</head>
+<div class="logo">
+    <!-- <apex:image url="{!URLFOR($Resource.Testdo, 'LVLlogoWithAddress.png')}" style="margin-left: 15px;"/> -->
+    <apex:image id="theImage" value="{!$Resource.Testdo}" width="200" height="200" alt="Description of image here"/>
+</div> 
+
+
+<div class="bPageFooter" id="bodyFooter"><div class="footer"></div></div>
+</apex:page>

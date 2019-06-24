@@ -1,0 +1,4 @@
+<aura:component implements="force:lightningQuickAction">
+    <ltng:require styles="{!$Resource.Testdo}" />
+    
+</aura:component>

@@ -1,0 +1,9 @@
+<apex:page StandardController="Case"> 
+<script src="/support/console/45.0/integration.js"></script> 
+<script> 
+function setTitle() { 
+sforce.console.setTabTitle('My Tab Title'); 
+}; 
+setTitle(); 
+</script> 
+</apex:page>

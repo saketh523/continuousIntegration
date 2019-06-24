@@ -1,0 +1,3 @@
+<apex:page standardController="Case_Product__c" recordSetVar="caseProducts" extensions="CaseRequestControllerForSalesforceSpt" action="{!processSelectedCaseProducts}" >
+      <apex:pageMessages id="showmsg"></apex:pageMessages>
+</apex:page>

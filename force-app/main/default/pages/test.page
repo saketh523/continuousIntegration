@@ -1,0 +1,126 @@
+<apex:page sidebar="false"
+           showHeader="false" standardStylesheets="false" cache="false">
+    <apex:stylesheet value="{!$Resource.TEST12}" />
+        <apex:composition template="testsitetemplate">
+        <apex:define name="body"><apex:page sidebar="false"
+           showHeader="false" standardStylesheets="false" cache="false">
+    <apex:stylesheet value="{!$Resource.TEST12}" />
+    <style>
+        #chatterFileRow {
+            border-bottom: none !important;
+        }
+        #chatterFile {
+            font-family: Helvetica, Arial, sans-serif !important;
+        }
+        .resizable {
+            resize: both;
+            overflow: auto;
+            min-height: 410px;
+            min-width: 550px;
+        }
+        .modal-wide {
+            max-width: 60% !important;
+        }
+        #comment-container {
+            height: 100%;
+        }
+        #subject-row {
+            position: absolute;
+            width: 95%;
+            padding-right: 32px;
+        }
+        #comment-row {
+            height: 75%;
+            position: absolute;
+            top: 70px;
+            padding-bottom: 15px;
+            width: 95%;
+            padding-right: 32px;
+        }
+        
+        #txt-comment {
+            height: 100%;
+        }
+        
+        .footer-resize {
+            padding-right: 32px;
+            width: 95%
+        }
+    </style>
+            <div class="container">
+test
+                <apex:form id="theForm">
+
+                    <div class="modal" id="action-modal" role="dialog">
+                        <div class="modal-dialog" id="action-modal-dialog">
+                            <div class="modal-content" id="action-modal-content">
+                                <div class="modal-header">
+                                    <h4 id="action-modal-header" class="modal-title"></h4>
+                                    <button type="button" class="close" data-dismiss="modal" onclick="clearModalDetails();">&times;</button> 
+                                </div>
+                                <div id="action-modal-body" class="modal-body">
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" id="action-modal-button" class="btn btn-primary text-uppercase" data-dismiss="modal"></button>
+                                    <button type="button" class="btn btn-outline-primary text-uppercase" data-dismiss="modal" onclick="clearModalDetails();">Back</button>                              </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <apex:pageBlock id="thePageBlock">
+test
+                        <apex:outputPanel id="displayFieldsPanel" layout="block" >
+
+                            <div class="row card-heading card-heading-border d-flex mt-3">
+                                <h2 class="table-title__bold table-title__leftmargin">Case Comments</h2>
+                                <apex:outputLink styleClass="btn btn-outline-primary text-uppercase anchor-btn"
+                                                 html-data-toggle="modal" value="#action-modal"
+                                                 onclick="openCaseCommentModal('Case Subject Here', 'Case ID')">
+                                    Add Comment
+                                </apex:outputLink>
+                            </div>
+                        </apex:outputPanel>
+
+                    </apex:pageBlock>
+
+                </apex:form>
+            </div>
+
+            <script type="text/javascript">
+ 
+                // Modal Action - Case Comments
+                function openCaseCommentModal(subject, caseId) {
+                    $('#action-modal-header').text('Add Case Comments Below');
+                    $('#action-modal-button').text('Add Comment');
+
+                    // Content elements
+                    $('#action-modal-body').append('<div class="container" id="comment-container" />');
+                    $('#comment-container').append('<div class="row" id="subject-row" />');
+                    $('#comment-container').append('<div class="row" id="comment-row" />');
+                    $('#subject-row').append('<div class="col-2 modal-label" id="subject-label" />');
+                    $('#subject-row').append('<div class="col" id="subject-field" />');
+                    $('#comment-row').append('<div class="col-2 modal-label" id="comment-label" />');
+                    $('#comment-row').append('<div class="col" id="comment-field" />');
+                    $('#subject-label').append('Subject');
+                    $('#subject-field').append('<input id="inp-subject" readonly="true" value="' + subject + '" />');
+                    $('#comment-label').append('Comment');
+                    $('#comment-field').append('<textarea id="txt-comment" maxlength="4000" rows="4" />');
+
+                    var subjectField = $('#inp-subject').addClass('support-case-form-control').addClass('modal-field');
+                    var commentField = $('#txt-comment').addClass('support-case-form-control').addClass('modal-field').addClass('modal-textarea');
+                    $('#action-modal-button').text('Add Comment');
+                    $('#action-modal-button').click(function() {
+                        var comment = commentField.val();
+                        addCaseComment(caseId, comment);
+                    });
+                    $('#action-modal-dialog').addClass('modal-wide');
+                    $('#action-modal-content').addClass('resizable');
+                    $('.modal-footer').addClass('footer-resize');
+                }
+
+            </script>
+</apex:page>
+
+        </apex:define>
+     </apex:composition>
+</apex:page>

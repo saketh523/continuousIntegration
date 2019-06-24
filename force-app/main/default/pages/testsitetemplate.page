@@ -1,0 +1,50 @@
+<apex:page sidebar="false" showHeader="false" standardStylesheets="false" cache="false">
+    <html>
+        <head>
+            <meta name="viewport" content="width=device-width" />
+            <apex:stylesheet value="{!URLFOR($Resource.test4custom, 'css/bootstrap.css')}" />
+            <apex:stylesheet value="{!$Resource.testtablesortercss}" />
+            <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+            <title>Tripwire Customer Center</title>
+
+            <style>
+                button {
+                    font-family: MavenPro;
+                    text-transform: uppercase;
+                }
+
+                /* For linkable tables */
+                    tbody.linkable td:hover, tbody.linkable th:hover {
+                    cursor: pointer;
+                }
+
+                tr th a {
+                    color: initial;
+                }
+
+                .card-section__header {
+                    padding: 1em 0;
+                    font-family: "MavenPro";
+                    font-weight: 300;
+                    font-size: 2rem;
+                }
+            </style>
+        </head>
+        <apex:insert name="header">
+        </apex:insert>
+
+        <apex:insert name="body">
+
+        </apex:insert>
+
+        <apex:insert name="footer">
+
+            <apex:includeScript value="{!$Resource.testjQuery3_2_1}" />
+            <apex:includeScript value="{!$Resource.testpopper}" />
+            <apex:includeScript value="{!URLFOR($Resource.test4custom, 'js/bootstrap.js')}"/>
+            <apex:includeScript value="{!$Resource.testtablesorter}"/>
+            
+
+        </apex:insert>
+    </html>
+</apex:page>

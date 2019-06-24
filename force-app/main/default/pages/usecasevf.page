@@ -1,0 +1,17 @@
+<apex:page controller="AccContact">
+  <apex:form >
+  <apex:pageBlock >
+      <h2>Account-Related Contact List</h2>
+    <apex:pageBlockTable value="{!accconts2}" var="a">
+    		<apex:column value="{!a.account.Name}"/>
+            <apex:column value="{!a.Name}"/>
+			<apex:column value="{!a.Email}"/>  
+        	<apex:column value="{!a.phone}"/> 
+	</apex:pageBlockTable>
+  </apex:pageBlock>
+      <div align = "center">
+         <apex:commandButton value="Generate PDF"  action="/apex/usecasevf1" />
+  		<apex:commandButton value="Send Email" action="{!sendingmail}"/>
+                </div>
+    </apex:form>
+</apex:page>

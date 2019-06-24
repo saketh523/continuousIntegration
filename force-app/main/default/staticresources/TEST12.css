@@ -1,0 +1,200 @@
+/* TCC_VFStyles
+ * CSS for VF pages in the customer community
+ * 11/15/2018 Idealist Consulting / David Cheng
+*/
+a {
+    color:#4A90E2;
+}
+
+a:hover {
+    color: #4A90E2;
+    cursor: default;
+    /*on-hover:*/
+}
+
+.btn {
+    margin-right: 10px !important;
+    height: 40px;
+    min-width: 190px;
+    line-height: 1.5rem !important;
+    font-family: Helvetica !important;
+}
+
+.btn-outline-primary {
+    color: #ea7125;
+    border-color: #ea7125;
+}
+
+table.data-table.table thead th {
+  font-family: MavenPro;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+h2.table-title__bold {
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+table.data-table.table thead th:first-of-type {
+  width: 140px;
+}
+
+table {
+    width:1000px;
+}
+
+table.data-table.table tbody th {
+  font-weight: normal;
+}
+
+.no-border {
+    border: 0;
+}
+
+.requiredField:after {
+    content: " *";
+}
+
+.support-case-form-control {
+        margin: 0px 10px 0px 0px;
+        display: block;
+        width: 500px;
+        padding: 0.5rem 0.75rem;
+        font-size: 1rem;
+        line-height: 1.25;
+        color: #495057;
+        background-color: #fff;
+        background-image: none;
+        background-clip: padding-box;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-radius: 0.25rem;
+        transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+.detailList {
+    font-family: MavenPro;
+    font-weight: normal;
+    margin: 0px 10px 0px 0px;
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.25;
+}
+
+.dataCol {
+    padding: 0.5rem 0.75rem;
+    width: 200px;
+}
+
+.dataRow {
+    border-top:1px solid rgba(0, 0, 0, 0.15);
+}
+
+.detail-btn {
+        padding: 0px 5px 0px 5px;
+        margin: -5px 0px 5px 10px;
+}
+
+.label {
+    margin-bottom:none !important;
+}
+
+hr {
+    border-top:1px solid rgba(0, 0, 0, 0.15);
+    margin-right: -15px;
+    margin-left: -15px
+}
+
+/* Override the bootstrap row class margin-left setting of -15px. */
+.card-heading {
+    margin-left: 0px !important;
+}
+
+.card-heading-border {
+    padding: 12px 0px 5px;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    border-color: #9B9B9B;
+}
+
+.modal-delete-text {
+    font-size: 140%;
+    text-align: center;
+}
+
+.modal-label {
+    text-align: right;
+    padding: 0px;
+}
+
+.modal-field {
+    display: inline-block;
+    width: 100%;
+    /*margin-left: 10px;*/
+}
+
+.modal-textarea {
+    resize: none;
+}
+
+/* layout.css Style */
+
+.upload-drop-zone {
+    height: 200px;
+    border-width: 2px;
+    margin-bottom: 20px;
+    color: #ccc;
+    border-style: dashed;
+    border-color: #ccc;
+    text-align: center;
+}
+
+.upload-drop-content {
+    position:relative;
+    top: 25%;
+}
+
+.upload-drop-zone.drop {
+    color: #222;
+    border-color: #222;
+}
+
+.upload-modal-body {
+    /*text-align: center;*/
+    padding: 20px;
+}
+
+.file-icon {
+    font-size: 400% !important;
+}
+
+.anchor-btn {
+    padding: 5px 5px 0px 5px;
+    margin: -5px 0px 5px 10px;
+}
+
+.spinner-parent {
+    display: table;
+    position: relative;
+    margin: 0 auto;
+    top: calc(50% - 24px);
+    width: 100%;
+    height: 100%;
+}
+
+#spin-icon {
+    padding: 30px;
+}
+
+.alert {
+    margin-top: 30px;
+}
+
+.file-size {
+    text-align: right;
+    padding: 0px 20px 0px 0px;
+}
+
+.container {
+    padding-bottom: 1em;
+}

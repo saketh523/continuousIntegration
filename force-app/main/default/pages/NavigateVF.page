@@ -1,0 +1,2 @@
+<apex:page controller="myfirstcontroller" action="{!doSomeDMLStuff}">
+</apex:page>
